@@ -3,18 +3,8 @@
     max-width: 300px;
 }
 
-.card-style {
-    margin:auto;
-    max-width: 300px;
-}
-
 .body {
-    border-radius: 8px;
-    padding: 16px;
-    position: relative;
-    margin-bottom: 16px;
-    align-items: center;
-    margin-top: 300px;
+    margin-top: 200px;
 }
 
 p{
