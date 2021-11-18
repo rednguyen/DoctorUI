@@ -1,0 +1,21 @@
+
+#page-wrap {
+    background-color: #EEE;
+    min-height: 100vh;
+    padding: 0;
+    width: 100vw;
+}
+#max-width-column {
+    background-image: url("./background.png");
+    background-color: white;
+    margin: 0 auto;
+    max-width: 1500px;
+    min-height: 100vh;
+    padding: 16px;
+    position: relative;
+}
+
+
+#content-wrap {
+    padding: 10px;
+}

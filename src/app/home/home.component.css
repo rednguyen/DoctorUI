@@ -1,0 +1,46 @@
+.card-style {
+    margin:auto;
+    max-width: 300px;
+}
+
+.card-style {
+    margin:auto;
+    max-width: 300px;
+}
+
+.body {
+    border-radius: 8px;
+    padding: 16px;
+    position: relative;
+    margin-bottom: 16px;
+    align-items: center;
+    margin-top: 300px;
+}
+
+p{
+    font-size: 20px;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 2
+}
+
+.signature{
+    text-align: right;
+    margin-right: 50px;
+    font-size: 20px;
+}
+
+button {
+    background-color: rgb(243, 243, 243);
+    border: none;
+    border-radius: 8px;
+    color: rgb(12, 8, 8);
+    cursor: pointer;
+    outline: none;
+    padding: 16px;
+    font-family: Arial, sans-serif;
+    font-size: 25px;
+    width: 300px;
+    height: 100px;
+    font-weight: bold;
+}

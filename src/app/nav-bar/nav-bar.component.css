@@ -1,0 +1,21 @@
+.nav-bar {
+    background-color: rgb(97, 181, 236);
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    border-right: 2px solid black; 
+    border-left: 2px solid black; 
+}
+
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+}
+
+.title {
+    font-size: 35px
+}
+
+.text-color {
+    color:rgb(243, 245, 247)
+}
