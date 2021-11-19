@@ -1,13 +1,20 @@
 <div class="body">
     <mat-card class="card-style">
-        <a routerLink="/patients">
-            <button>VIEW PATIENT INFO</button>
+        <a routerLink="/appointment">
+            <button id="appointmentView" >VIEW SCHEDULE</button>
         </a>
+        <a   routerLink="/patients">
+            <button id="patientInfo">VIEW PATIENT INFORMATION</button>
+        </a>
+
+
         
     </mat-card>
-    <mat-card class="card-style">
+
+    <!-- is this seperate card needed? Two links in one card is fine no?, there anchor tag allows different routes already? -->
+    <!-- <mat-card class="card-style">
         <a routerLink="/appointment">
             <button>VIEW APPOITMENT</button>
         </a>
-    </mat-card>
+    </mat-card> --> 
 </div>

@@ -6,10 +6,11 @@
     width: 100vw;
 }
 #max-width-column {
-    background-image: url("./background.png");
+    background-image: url("./kpbackground.png");
     background-color: white;
     margin: 0 auto;
-    max-width: 1500px;
+    /* max-width: 1800px; */
+    background-size: 100% 100%;
     min-height: 100vh;
     padding: 16px;
     position: relative;
