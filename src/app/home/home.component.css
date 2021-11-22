@@ -8,7 +8,6 @@
     max-width: 350px;
     height: 400px;
     background-color:rgba(174, 230, 253, 0.67);
- 
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -49,7 +48,7 @@ text-align: center;
     position: relative;
     margin-bottom: 16px;
     align-items: center;
-    margin-top: 300px;
+    margin-top: 70px;
 }
 
 p{
