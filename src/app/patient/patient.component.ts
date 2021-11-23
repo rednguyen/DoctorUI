@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Patient } from '../types';
-import { fakePatients } from '../fake-data';
+import { PatientsService } from '../patients.service';
+
 
 @Component({
   selector: 'app-patient',
@@ -11,10 +12,13 @@ export class PatientComponent implements OnInit {
 
   patients: Patient[] = [];
 
-  constructor() { }
+  constructor(
+    private patientsService: PatientsService
+  ) { }
 
   ngOnInit(): void {
-    this.patients = fakePatients;
+    this.patientsService.getPatients()
+      .subscribe(patients => this.patients = patients)
   }
 
 }

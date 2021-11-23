@@ -1,1 +1,10 @@
-<p>appointment works!</p>
+<div>
+    <div class="content-box" *ngFor="let patient of patients">
+        <a>
+            <h3>Name: {{patient.firstname}} {{patient.lastname}}</h3>
+            <h3>Email: {{patient.email}}</h3>
+            <h3>Phone: {{patient.phone}}</h3>
+            <h3>Teleconsult Link: </h3>
+        </a>
+    </div>
+</div>
