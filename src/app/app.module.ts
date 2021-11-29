@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { PatientComponent } from './patient/patient.component';
 import { AppointmentComponent } from './appointment/appointment.component';
+import { PatientDetailComponent } from './patient-detail/patient-detail.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AppointmentComponent } from './appointment/appointment.component';
     NavBarComponent,
     HomeComponent,
     PatientComponent,
-    AppointmentComponent
+    AppointmentComponent,
+    PatientDetailComponent
   ],
   imports: [
     BrowserModule,

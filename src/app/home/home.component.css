@@ -17,6 +17,7 @@
 }
 
 #appointmentView{
+margin-top: 40px ;
 text-decoration: underline;
 /* font-family: Ruda; */
 font-size: 24px;
@@ -29,7 +30,7 @@ text-align: center;
 
 }
 #patientInfo{
-    margin-top: 40px ;
+    
     text-decoration: underline;
     /* font-family: Ruda; */
     font-size: 24px;

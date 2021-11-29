@@ -15,4 +15,10 @@ export class PatientsService {
   getPatients(): Observable<Patient[]> {
     return this.http.get<Patient[]>('/api/Patients');
   }
+
+  getPatientByFirstName(firstname: string): Observable<Patient>{
+    return this.http.get<Patient>(`api/Patients/${firstname}`);
+  }
+
+   
 }

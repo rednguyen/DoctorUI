@@ -4,5 +4,6 @@ export interface Patient {
     address: string,
     dateofbirth: string,
     email: string,
-    phone:string
+    phone:string,
+    meetingtime: string
 }
