@@ -20,5 +20,9 @@ export class PatientsService {
     return this.http.get<Patient>(`api/Patients/${firstname}`);
   }
 
+  deletePatientByFirstName(firstname: string): Observable<Patient>{
+    return this.http.delete<Patient>(`api/Patients/${firstname}`);
+  }
+
    
 }

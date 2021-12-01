@@ -21,3 +21,16 @@ h3{
     padding: 16px;
     width: 400px;
 }
+
+button {
+    background-color: black;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    padding: 16px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 8px;
+}
