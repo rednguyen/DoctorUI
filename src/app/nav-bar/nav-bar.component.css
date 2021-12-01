@@ -1,10 +1,4 @@
 .nav-bar {
-    /* background-color: rgb(97, 181, 236);
-    justify-content: space-between;
-    border-bottom: 2px solid black;
-    border-top: 2px solid black;
-    border-right: 2px solid black; 
-    border-left: 2px solid black;  */
     background: rgba(78, 146, 173, 0.2);
     justify-content: space-between;
     border-radius: 20px;
@@ -12,6 +6,8 @@
 
 a:hover, a:visited, a:link, a:active
 {
+    font-family:'Ruda';
+
     text-decoration: none;
 }
 

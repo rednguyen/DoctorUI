@@ -1,5 +1,4 @@
-<div>
-    <div class="content-box" *ngFor="let patient of patients">
+<mat-card class="card" *ngFor="let patient of patients">
         <div class="info">
             <h3>First Name: {{patient.firstname}}</h3>
             <h3>Last Name: {{patient.lastname}}</h3>
@@ -8,11 +7,6 @@
             <h3>Email: {{patient.email}}</h3>
             <h3>Phone: {{patient.phone}}</h3>
         </div>
-        <div class="id">
-            <img src="../../assets/driver.jpg"  width="400"/>
-        </div>
-        <div class="id">
-            <img src="../../assets//driver.jpg" width="400"/>
-        </div>
-    </div>
-</div>
+        <div class = "imgDiv"><img  src="../../assets/driver.jpg" /></div>
+        <div class = "imgDiv"><img  src="../../assets//driver.jpg"/></div>
+</mat-card>
