@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class PatientComponent implements OnInit {
 
   patients: Patient[] = [];
+ 
 
   constructor(
     private patientsService: PatientsService,

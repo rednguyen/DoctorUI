@@ -1,25 +1,36 @@
-.content-box {
-    background-color: lemonchiffon;
-    border-radius: 8px;
-    padding: 16px;
-    position: relative;
-    margin-bottom: 16px;
-}
 
-h3{
-    font-weight: bold;
-}
-
+.card{
+    margin:20px;
+    background-color:rgba(174, 230, 253, 0.67);
+     border-radius: 20px;
+     max-height: 500px;
+  }
 .info{
+    padding-top: 80px;
+    padding-left: 50px;
     display: inline-block;
-    padding: 16px;
-    width: 400px;
+    margin: auto;
+    width: fit-content;
 }
-
+h3{
+    font-family: 'Outfit';
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 30px;
+}
+.imgDiv{
+    padding-top: 30px;
+    display: block;
+    width: fit-content;
+    position: relative;
+    bottom: 390px;
+    left: 65%;
+}
+img{
+    width:300px;
+}
 .id{
     display: inline-block;
-    padding: 16px;
-    width: 400px;
 }
 
 button {
@@ -32,5 +43,15 @@ button {
     padding: 16px;
     font-family: Arial, sans-serif;
     font-size: 16px;
-    margin: 8px;
+}
+
+.buttons-container {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    padding: 16px;
+}
+
+.buttons-container > button {
+    margin-left: 8px;
 }

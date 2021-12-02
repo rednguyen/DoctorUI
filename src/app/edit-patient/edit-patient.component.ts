@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { PatientsService } from '../patients.service';
+import { Patient } from '../types';
 
 @Component({
   selector: 'app-edit-patient',
@@ -9,12 +10,14 @@ import { PatientsService } from '../patients.service';
   styleUrls: ['./edit-patient.component.css']
 })
 export class EditPatientComponent implements OnInit {
-  newfirstname: string
+  firstname: string
+  newfirstname: string 
   lastname: string
   address: string
   dateofbirth: string
   email: string
   phone: string
+  patient: Patient
   
   constructor(
     private router: Router,
@@ -23,11 +26,23 @@ export class EditPatientComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.firstname = this.route.snapshot.paramMap.get('firstname');
+    this.patientsSerive.getPatientByFirstName(this.firstname)
+      .subscribe(patient => {
+      this.patient = patient
+      this.newfirstname = this.patient.firstname
+      this.lastname =  this.patient.lastname
+      this.address = this.patient.address
+      this.dateofbirth = this.patient.dateofbirth
+      this.email = this.patient.email
+      this.phone = this.patient.phone
+      })
+
   }
 
+
   onSubmit(): void {
-    const firstname = this.route.snapshot.paramMap.get('firstname');
-    this.patientsSerive.editPatientByFirstName(firstname, this.newfirstname,this.lastname,
+    this.patientsSerive.editPatientByFirstName(this.firstname, this.newfirstname,this.lastname,
       this.address,this.dateofbirth,this.email, this.phone)
       .subscribe(() => {
         alert("Successfully Updated!");

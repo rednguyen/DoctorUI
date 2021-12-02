@@ -66,8 +66,7 @@ button {
 
 #appointmentView{
 margin-top: 40px ;
-text-decoration: underline;
-/* font-family: Ruda; */
+ font-family: 'Ruda'; 
 font-size: 24px;
 font-style: normal;
 font-weight: 400;
@@ -79,8 +78,7 @@ text-align: center;
 }
 #patientInfo{
     
-    text-decoration: underline;
-    /* font-family: Ruda; */
+    font-family: 'Ruda'; 
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
