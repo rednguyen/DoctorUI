@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { PatientsService } from '../patients.service';
 
 @Component({
   selector: 'app-edit-patient',
@@ -7,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./edit-patient.component.css']
 })
 export class EditPatientComponent implements OnInit {
-  firstname: string
+  newfirstname: string
   lastname: string
   address: string
   dateofbirth: string
@@ -16,13 +18,20 @@ export class EditPatientComponent implements OnInit {
   
   constructor(
     private router: Router,
+    private route: ActivatedRoute,
+    private patientsSerive: PatientsService,
   ) { }
 
   ngOnInit(): void {
   }
 
   onSubmit(): void {
-    alert('Succesfully Updated!');
-    this.router.navigateByUrl('/patients')
+    const firstname = this.route.snapshot.paramMap.get('firstname');
+    this.patientsSerive.editPatientByFirstName(firstname, this.newfirstname,this.lastname,
+      this.address,this.dateofbirth,this.email, this.phone)
+      .subscribe(() => {
+        alert("Successfully Updated!");
+        this.router.navigateByUrl('/patients');
+      })
   }
 }

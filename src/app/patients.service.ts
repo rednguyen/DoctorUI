@@ -24,5 +24,17 @@ export class PatientsService {
     return this.http.delete<Patient>(`api/Patients/${firstname}`);
   }
 
+  editPatientByFirstName(firstname: string, newfirstname: string, lastname: string, address: string, dateofbirth: string, 
+    email:string, phone: string): Observable<Patient>{
+    return this.http.put<Patient>(`api/Patients/${firstname}`, {
+      "firstname": newfirstname,
+      "lastname": lastname,
+      "address": address,
+      "dateofbirth": dateofbirth,
+      "email": email,
+      "phone": phone,
+    })
+  }
+
    
 }

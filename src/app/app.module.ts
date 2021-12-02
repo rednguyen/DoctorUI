@@ -23,8 +23,7 @@ import { FormsModule } from '@angular/forms';
     PatientComponent,
     AppointmentComponent,
     PatientDetailComponent,
-    EditPatientComponent,
-    FormsModule
+    EditPatientComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +31,8 @@ import { FormsModule } from '@angular/forms';
     MatToolbarModule,
     BrowserAnimationsModule,
     MatCardModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
