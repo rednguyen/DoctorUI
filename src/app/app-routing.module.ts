@@ -5,9 +5,15 @@ import { PatientComponent } from './patient/patient.component';
 import { AppointmentComponent } from './appointment/appointment.component';
 import { PatientDetailComponent } from './patient-detail/patient-detail.component';
 import { EditPatientComponent } from './edit-patient/edit-patient.component';
+import { DoctorGuard } from './doctor.guard';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent, pathMatch: 'full'},
+  {path: '', component: HomeComponent},
+  {path: 'doctor', component: HomeComponent, canActivate: [DoctorGuard]},
+  {path: 'login', component: LoginComponent},
+  {path: 'register', component: RegisterComponent},
   {path: 'patients', component: PatientComponent},
   {path: 'appointment', component: AppointmentComponent},
   {path: 'patients/:firstname', component: PatientDetailComponent},

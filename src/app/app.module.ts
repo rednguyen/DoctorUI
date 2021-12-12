@@ -14,6 +14,10 @@ import { AppointmentComponent } from './appointment/appointment.component';
 import { PatientDetailComponent } from './patient-detail/patient-detail.component';
 import { EditPatientComponent } from './edit-patient/edit-patient.component';
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+// import { Router, RouterModule, Routes } from '@angular/router';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +27,9 @@ import { FormsModule } from '@angular/forms';
     PatientComponent,
     AppointmentComponent,
     PatientDetailComponent,
-    EditPatientComponent
+    EditPatientComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +38,9 @@ import { FormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     MatCardModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    // RouterModule,
+    // Router
   ],
   providers: [],
   bootstrap: [AppComponent]

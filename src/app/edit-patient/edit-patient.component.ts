@@ -14,7 +14,7 @@ export class EditPatientComponent implements OnInit {
   newfirstname: string 
   lastname: string
   address: string
-  dateofbirth: string
+  DOB: string
   email: string
   phone: string
   patient: Patient
@@ -26,14 +26,14 @@ export class EditPatientComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.firstname = this.route.snapshot.paramMap.get('firstname');
-    this.patientsSerive.getPatientByFirstName(this.firstname)
+     this.phone = this.route.snapshot.paramMap.get('phone');
+    this.patientsSerive.getPatientByFirstName(this.phone)
       .subscribe(patient => {
       this.patient = patient
-      this.newfirstname = this.patient.firstname
+      this.firstname = this.patient.firstname
       this.lastname =  this.patient.lastname
       this.address = this.patient.address
-      this.dateofbirth = this.patient.dateofbirth
+      this.DOB = this.patient.DOB
       this.email = this.patient.email
       this.phone = this.patient.phone
       })
@@ -42,8 +42,8 @@ export class EditPatientComponent implements OnInit {
 
 
   onSubmit(): void {
-    this.patientsSerive.editPatientByFirstName(this.firstname, this.newfirstname,this.lastname,
-      this.address,this.dateofbirth,this.email, this.phone)
+    this.patientsSerive.editPatientByFirstName(this.firstname,this.lastname,
+      this.address,this.DOB,this.email, this.phone)
       .subscribe(() => {
         alert("Successfully Updated!");
         this.router.navigateByUrl('/patients');
