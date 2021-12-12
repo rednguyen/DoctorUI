@@ -13,9 +13,9 @@ import { PatientComponent } from './patient/patient.component';
 import { AppointmentComponent } from './appointment/appointment.component';
 import { PatientDetailComponent } from './patient-detail/patient-detail.component';
 import { EditPatientComponent } from './edit-patient/edit-patient.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
+import { SignupComponent } from './signup/signup.component';
 // import { Router, RouterModule, Routes } from '@angular/router';
 
 
@@ -29,7 +29,8 @@ import { RegisterComponent } from './register/register.component';
     PatientDetailComponent,
     EditPatientComponent,
     LoginComponent,
-    RegisterComponent
+    SignupComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -39,6 +40,7 @@ import { RegisterComponent } from './register/register.component';
     MatCardModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule
     // RouterModule,
     // Router
   ],
