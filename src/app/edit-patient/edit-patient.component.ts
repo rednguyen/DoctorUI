@@ -14,7 +14,7 @@ export class EditPatientComponent implements OnInit {
   newfirstname: string 
   lastname: string
   address: string
-  DOB: string
+  dateofbirth: string
   email: string
   phone: string
   patient: Patient
@@ -33,7 +33,7 @@ export class EditPatientComponent implements OnInit {
       this.firstname = this.patient.firstname
       this.lastname =  this.patient.lastname
       this.address = this.patient.address
-      this.DOB = this.patient.DOB
+      this.dateofbirth = this.patient.dateofbirth
       this.email = this.patient.email
       this.phone = this.patient.phone
       })
@@ -43,7 +43,7 @@ export class EditPatientComponent implements OnInit {
 
   onSubmit(): void {
     this.patientsSerive.editPatientByFirstName(this.firstname,this.lastname,
-      this.address,this.DOB,this.email, this.phone)
+      this.address,this.dateofbirth,this.email, this.phone)
       .subscribe(() => {
         alert("Successfully Updated!");
         this.router.navigateByUrl('/patients');

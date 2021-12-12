@@ -13,20 +13,20 @@ export class PatientsService {
   ) { }
 
   getPatients(): Observable<Patient[]> {
-    return this.http.get<Patient[]>('https://localhost:44337/api/Patients');
+    return this.http.get<Patient[]>('https://localhost:44323/api/Patients');
   }
 
   getPatientByFirstName(phone: string): Observable<Patient>{
-    return this.http.get<Patient>(`https://localhost:44337/api/Patients/${phone}`);
+    return this.http.get<Patient>(`https://localhost:44323/api/Patients/${phone}`);
   }
 
   deletePatientByFirstName(phone: string): Observable<Patient>{
-    return this.http.delete<Patient>(`https://localhost:44337/api/Patients/${phone}`);
+    return this.http.delete<Patient>(`https://localhost:44323/api/Patients/${phone}`);
   }
 
   editPatientByFirstName(firstname: string, lastname: string, address: string, dateofbirth: string, 
     email:string, phone: string): Observable<Patient>{
-    return this.http.put<Patient>(`https://localhost:44337/api/Patients/${phone}`, {
+    return this.http.put<Patient>(`https://localhost:44323/api/Patients/${phone}`, {
       "firstname": firstname,
       "lastname": lastname,
       "address": address,
