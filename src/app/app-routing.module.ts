@@ -10,8 +10,8 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
-  {path: 'doctor', component: HomeComponent, canActivate: [DoctorGuard]},
+  {path: '', component: LoginComponent},
+  {path: 'doctor', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   {path: 'signup', component: SignupComponent},
   {path: 'patients', component: PatientComponent},
