@@ -16,6 +16,8 @@ import { EditPatientComponent } from './edit-patient/edit-patient.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { LogoutComponent } from './logout/logout.component';
+import { HomeNavComponent } from './home-nav/home-nav.component';
 // import { Router, RouterModule, Routes } from '@angular/router';
 
 
@@ -29,7 +31,9 @@ import { SignupComponent } from './signup/signup.component';
     PatientDetailComponent,
     EditPatientComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    LogoutComponent,
+    HomeNavComponent
     
   ],
   imports: [

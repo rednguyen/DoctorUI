@@ -1,0 +1,21 @@
+.nav-bar {
+    background: rgba(78, 146, 173, 0.2);
+    justify-content: space-between;
+    border-radius: 20px;
+}
+
+a:hover, a:visited, a:link, a:active
+{
+    font-family:'Ruda';
+
+    text-decoration: none;
+}
+
+.title {
+    font-size: 35px
+    
+}
+
+.text-color {
+    color:rgb(243, 245, 247)
+}
