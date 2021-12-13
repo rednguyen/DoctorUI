@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Patient } from '../types';
+import { Patient } from '../patient';
 import { PatientsService } from '../patients.service';
 
 @Component({
@@ -19,8 +19,8 @@ export class PatientDetailComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    const firstname = this.route.snapshot.paramMap.get('firstname');
-    this.patientsSerive.getPatientByFirstName(firstname)
+    const pID = parseInt(this.route.snapshot.paramMap.get('pID'));
+    this.patientsSerive.getPatientByID(pID)
       .subscribe(patient => {
         this.patient = patient;
         this.isLoading = false;

@@ -39,3 +39,7 @@ input, textarea {
 div {
     padding: 8px;
 }
+
+label{
+    font-weight: 900;
+}

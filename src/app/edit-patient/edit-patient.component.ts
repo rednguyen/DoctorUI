@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { PatientsService } from '../patients.service';
-import { Patient } from '../types';
+import { Patient } from '../patient';
+import { appt } from '../appt';
 
 @Component({
   selector: 'app-edit-patient',
@@ -10,12 +11,12 @@ import { Patient } from '../types';
   styleUrls: ['./edit-patient.component.css']
 })
 export class EditPatientComponent implements OnInit {
-  firstname: string
-  newfirstname: string 
-  lastname: string
+  appts: appt[]
+  pID: number
+  fname: string 
+  lname: string
   address: string
-  dateofbirth: string
-  email: string
+  DOB: string
   phone: string
   patient: Patient
   
@@ -26,24 +27,24 @@ export class EditPatientComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.firstname = this.route.snapshot.paramMap.get('firstname');
-    this.patientsSerive.getPatientByFirstName(this.firstname)
+    console.log(this.route.snapshot.paramMap.get('pID'));
+    this.pID = parseInt(this.route.snapshot.paramMap.get('pID'));
+    
+    this.patientsSerive.getPatientByID(this.pID)
       .subscribe(patient => {
-      this.patient = patient
-      this.newfirstname = this.patient.firstname
-      this.lastname =  this.patient.lastname
-      this.address = this.patient.address
-      this.dateofbirth = this.patient.dateofbirth
-      this.email = this.patient.email
-      this.phone = this.patient.phone
+      this.appts = patient.appts
+      this.fname = patient.fname
+      this.lname =  patient.lname
+      this.address = patient.address
+      this.DOB = patient.DOB
+      this.phone = patient.phone
       })
-
   }
 
 
   onSubmit(): void {
-    this.patientsSerive.editPatientByFirstName(this.firstname, this.newfirstname,this.lastname,
-      this.address,this.dateofbirth,this.email, this.phone)
+    this.patientsSerive.editPatientByID(this.appts, this.pID, this.fname,this.lname,
+      this.address,this.DOB, this.phone)
       .subscribe(() => {
         alert("Successfully Updated!");
         this.router.navigateByUrl('/patients');

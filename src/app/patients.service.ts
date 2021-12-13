@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Patient } from './types';
+import { Patient } from './patient';
 import { HttpClient } from '@angular/common/http';
+import { appt } from './appt';
 
 @Injectable({
   providedIn: 'root'
@@ -13,25 +14,27 @@ export class PatientsService {
   ) { }
 
   getPatients(): Observable<Patient[]> {
-    return this.http.get<Patient[]>('/api/Patients');
+    return this.http.get<Patient[]>('https://localhost:44337/api/patients');
   }
 
-  getPatientByFirstName(firstname: string): Observable<Patient>{
-    return this.http.get<Patient>(`api/Patients/${firstname}`);
+  getPatientByID(pID: number): Observable<Patient>{
+    return this.http.get<Patient>(`https://localhost:44337/api/patients/${pID}`);
   }
 
-  deletePatientByFirstName(firstname: string): Observable<Patient>{
-    return this.http.delete<Patient>(`api/Patients/${firstname}`);
+  deletePatientByFirstName(pID: number): Observable<Patient>{
+    return this.http.delete<Patient>(`https://localhost:44337/api/patients/${pID}`);
   }
 
-  editPatientByFirstName(firstname: string, newfirstname: string, lastname: string, address: string, dateofbirth: string, 
-    email:string, phone: string): Observable<Patient>{
-    return this.http.put<Patient>(`api/Patients/${firstname}`, {
-      "firstname": newfirstname,
-      "lastname": lastname,
+  editPatientByID(appts: appt[],pID: number, fname: string, lname: string, address: string, DOB: string, 
+     phone: string): Observable<Patient>{
+    
+    return this.http.put<Patient>(`https://localhost:44337/api/patients/${pID}`, {
+      "appts": appts,
+      "pID": pID,
+      "fname": fname,
+      "lname": lname,
       "address": address,
-      "dateofbirth": dateofbirth,
-      "email": email,
+      "DOB": DOB,
       "phone": phone,
     })
   }

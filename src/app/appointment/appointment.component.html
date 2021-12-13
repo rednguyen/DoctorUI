@@ -1,13 +1,13 @@
 <div>
     <div class="content-box" *ngFor="let patient of patients">
         <a>
-            <h3>Name: {{patient.firstname}} {{patient.lastname}}</h3>
-            <h3>Email: {{patient.email}}</h3>
+            <h3>Name: {{patient.fname}} {{patient.lname}}</h3>
+            <!-- <h3>Email: {{patient.email}}</h3> -->
             <h3>Phone: {{patient.phone}}</h3>
-            <h3>Date and Time: {{patient.meetingtime}}</h3>
+            <h3>Date and Time: {{patient.appts[0].date_time}}</h3>
             <h3>Teleconsult Link: <a href="https://us06web.zoom.us/j/89541632020?pwd=QlQ4M2RveWFrYnBaZjJpQkxUdjlTdz09#success">Click Here</a></h3>
-            <button routerLink="/patients/{{patient.firstname}}">View Patient</button>
-            <button (click)="deletePatient(patient.firstname)">Delete Appointment</button>
+            <button routerLink="/patients/{{patient.pID}}">View Patient</button>
+            <button (click)="deletePatient(patient.pID)">Delete Appointment</button>
         </a>
     </div>
 </div>
