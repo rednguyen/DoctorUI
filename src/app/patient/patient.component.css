@@ -1,4 +1,45 @@
+/* gridlist material */
+mat-grid-list{
+    margin-top: 1px;
+    border-radius:100px
+}
+mat-grid-tile {
+    background: white;
+}
+    /* table */
+table{
+    margin-top:10px;
+    background: white;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
 
+}
+table, th, td {
+    border: .1px solid #ddd;
+  }
+#delete{
+    text-decoration: underline;
+}
+td{
+    padding:15px;
+}
+
+#patients tr:nth-child(even){background-color: #f2f2f2;}
+#patients tr:hover {background-color: #ddd;}
+
+#patients th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #0061F2;
+    color: white;
+  }
+
+
+
+
+/*  */
 .card{
     margin:20px;
     background-color:rgba(174, 230, 253, 0.67);

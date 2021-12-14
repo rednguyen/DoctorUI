@@ -1,13 +1,24 @@
-<mat-card class="card" *ngFor="let patient of patients">
-        <div class="info">
-            <h3>First Name: {{patient.fname}}</h3>
-            <h3>Last Name: {{patient.lname}}</h3>
-            <h3>Address: {{patient.address}}</h3>
-            <h3>Date of Birth: {{patient.DOB}}</h3>
-            <h3>Phone: {{patient.phone}}</h3>
-            <button routerLink="/edit-patient/{{patient.pID}}">Update</button>
-        </div>
-        <div class = "imgDiv"><img  src="../../assets/driver.jpg" /></div>
-        <div class = "imgDiv"><img  src="../../assets/insurance.jpg"/></div>
-        
-</mat-card>
+
+
+  <table id="patients" >
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Address</th>
+      <th>Date Of Birth</th>
+      <th>Phone</th>
+      <th>View</th>
+      <th>Update</th>
+      <th>Delete</th>
+    </tr>
+    <tr *ngFor="let patient of patients" >
+      <td>{{patient.fname}}</td>
+      <td>{{patient.lname}}</td>
+      <td>{{patient.address}}</td>
+      <td>{{patient.DOB}}</td>
+      <td>{{patient.phone}}</td>
+      <td><a routerLink="/patients/{{patient.pID}}">View</a></td>
+      <td><a routerLink="/edit-patient/{{patient.pID}}">Update</a></td>
+      <td><a (click)="deletePatient(patient.pID)" id="delete">Delete</a></td>
+    </tr>
+  </table>
