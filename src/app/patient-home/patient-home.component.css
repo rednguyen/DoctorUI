@@ -1,0 +1,45 @@
+
+.card-style {
+    padding-top: 20px;
+    background-color:rgba(174, 230, 253, 0.67);
+    justify-content: left;
+    border-radius: 20px;
+
+}
+
+input{
+    margin-left: 20px;
+    margin-top:20px ;
+    border-color: white;
+}
+label{
+    font-family: 'Ruda';
+    font-size: 15px;
+}
+
+.body {
+    border-radius: 8px;
+    padding: 16px;
+    position: relative;
+    margin-bottom: 16px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+h3,p{
+    font-family: 'Ruda';
+    padding-left: 10px;
+}
+
+button {
+    margin-top: 20px;
+    background-color: rgb(243, 243, 243,.70);
+    border: none;
+    border-radius: 8px;
+    padding: 16px;
+    font-family: Ruda;
+    font-size: 20px;
+    width: 200px;
+    height: 70px;
+    font-weight: bold;
+}

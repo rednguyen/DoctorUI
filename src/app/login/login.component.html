@@ -1,0 +1,26 @@
+<mat-card class="card-style">
+
+<form [formGroup]="loginForm" (ngSubmit)="onClickSubmit(loginForm.value)">
+    <div>
+        <label>ID</label>
+        <input type="text" class="form-control" formControlName="id">
+        <span 
+            *ngIf="loginFormControl['id'].touched || submitted && loginFormControl['id'].errors?.['required']">
+    
+        </span>
+    </div>
+    <div>
+        <label>Phone</label>
+        <input type="text" class="form-control" formControlName="phone">
+        <span 
+            *ngIf="loginFormControl['phone'].touched || submitted && loginFormControl['phone'].errors?.['required']">
+     </span>
+    </div>
+
+    
+    <div class="form-group">
+        <button type="submit">Submit</button>
+    </div>
+</form>
+
+</mat-card>

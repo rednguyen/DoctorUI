@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { HttpClientModule } from '@angular/common/http';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
@@ -13,7 +13,12 @@ import { PatientComponent } from './patient/patient.component';
 import { AppointmentComponent } from './appointment/appointment.component';
 import { PatientDetailComponent } from './patient-detail/patient-detail.component';
 import { EditPatientComponent } from './edit-patient/edit-patient.component';
-import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { PatientHomeComponent } from './patient-home/patient-home.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ApptPerPatientComponent } from './appt-per-patient/appt-per-patient.component';
+
 
 @NgModule({
   declarations: [
@@ -23,16 +28,23 @@ import { FormsModule } from '@angular/forms';
     PatientComponent,
     AppointmentComponent,
     PatientDetailComponent,
-    EditPatientComponent
+    EditPatientComponent,
+    LoginComponent,
+    PatientHomeComponent,
+    ApptPerPatientComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     MatToolbarModule,
     BrowserAnimationsModule,
     MatCardModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatFormFieldModule,
+    ReactiveFormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
