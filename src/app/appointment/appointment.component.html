@@ -1,8 +1,29 @@
 <div>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Date and Time</th>
+            <th>Link</th>
+            <th>View</th>
+            <th>Delete</th>
+        </tr>
+        <tr *ngFor="let patient of patients">
+            <td>{{patient.fname}} {{patient.lname}}</td>
+            <td> {{patient.phone}}</td>
+            <td> {{patient.appts[0].date_time}}</td>
+            <td> <a href="https://us06web.zoom.us/j/89541632020?pwd=QlQ4M2RveWFrYnBaZjJpQkxUdjlTdz09#success">Open</a></td>
+            <td> <a href="/patients/{{patient.pID}}">View</a></td>
+            <td> <button (click)="deletePatient(patient.pID)">Delete</button></td>
+        </tr>
+    </table>
+</div>
+
+<!-- <div>
     <div class="content-box" *ngFor="let patient of patients">
         <a>
             <h3>Name: {{patient.fname}} {{patient.lname}}</h3>
-            <!-- <h3>Email: {{patient.email}}</h3> -->
+           
             <h3>Phone: {{patient.phone}}</h3>
             <h3>Date and Time: {{patient.appts[0].date_time}}</h3>
             <h3>Teleconsult Link: <a href="https://us06web.zoom.us/j/89541632020?pwd=QlQ4M2RveWFrYnBaZjJpQkxUdjlTdz09#success">Click Here</a></h3>
@@ -11,3 +32,5 @@
         </a>
     </div>
 </div>
+ -->
+
