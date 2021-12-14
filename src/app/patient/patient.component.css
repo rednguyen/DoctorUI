@@ -1,11 +1,4 @@
-/* gridlist material */
-mat-grid-list{
-    margin-top: 1px;
-    border-radius:100px
-}
-mat-grid-tile {
-    background: white;
-}
+
     /* table */
 table{
     margin-top:10px;
