@@ -30,11 +30,11 @@ export class AppointmentComponent implements OnInit {
       window.location.reload();
     })
 
-    this.patientsService.deletePatientByID(pID)
-    .subscribe(() => {
-      alert("Successfully Deleted!");
-      window.location.reload();
-    })
+    // this.patientsService.deletePatientByID(pID)
+    // .subscribe(() => {
+    //   alert("Successfully Deleted!");
+    //   window.location.reload();
+    // })
   }
 
 }

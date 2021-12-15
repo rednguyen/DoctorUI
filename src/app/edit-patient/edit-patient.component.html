@@ -1,29 +1,41 @@
 <div class="content-box">
     <h2>Update Patient Information</h2>
-    <form (ngSubmit)="onSubmit()">
+    <form  [formGroup]="form" (ngSubmit)="onSubmit()">
         <div>
             <label for="firstname">
                 First Name:
             </label>
-            <input id="fname" name="fname" type="text" [(ngModel)]="fname" />
+            <input id="fname" name="fname" type="text" formControlName="fname" [(ngModel)]="fname" [ngClass]="{ 'is-invalid': submitted && f['fname'].errors}"/>
+            <div *ngIf="submitted && f['fname'].errors" class="invalid-feedback">
+              <div style="text-align: left; margin-left: 95px; margin-top: -15px;" *ngIf="f['fname'].errors['required']">First Name is required</div>
+            </div>
         </div>
         <div>
             <label for="lname">
                 Last Name:
             </label>
-            <input id="lname" name="lnamee" type="text" [(ngModel)]="lname"/>
+            <input formControlName="lname" id="lname" name="lname" type="text" [(ngModel)]="lname" [ngClass]="{ 'is-invalid': submitted && f['lname'].errors}"/>
+            <div *ngIf="submitted && f['lname'].errors" class="invalid-feedback">
+                <div style="text-align: left; margin-left: 95px; margin-top: -15px;" *ngIf="f['lname'].errors['required']">Last Name is required</div>
+            </div>
         </div>
         <div>
             <label for="address">
                 Address:
             </label>
-            <input id="address" name="address" type="text" [(ngModel)]="address"/>
+            <input formControlName="address" id="address" name="address" type="text" [(ngModel)]="address" [ngClass]="{ 'is-invalid': submitted && f['address'].errors}"/>
+            <div *ngIf="submitted && f['address'].errors" class="invalid-feedback">
+            <div style="text-align: left; margin-left: 95px; margin-top: -15px;" *ngIf="f['address'].errors['required']">Address is required</div>
+            </div>
         </div>
         <div>
             <label for="DOB">
                 Date of Birth:
             </label>
-            <input id="DOB" name="DOB" type="date" [(ngModel)]="DOB"/>
+            <input id="DOB" name="DOB" formControlName="DOB" type="date" [(ngModel)]="DOB" [ngClass]="{ 'is-invalid': submitted && f['DOB'].errors}" />
+            <div *ngIf="submitted && f['DOB'].errors" class="invalid-feedback">
+                <div style="text-align: left; margin-left: 95px; margin-top: -15px;" *ngIf="f['DOB'].errors['required']">Date of Birth is required</div>
+            </div>
         </div>
         <!-- <div>
             <label for="email">
@@ -35,7 +47,11 @@
             <label for="phone">
                 Phone:
             </label>
-            <input id="phone" name="phone" type="text" [(ngModel)]="phone"/>
+            <input formControlName="phone" id="phone" name="phone" type="text" [(ngModel)]="phone" [ngClass]="{ 'is-invalid': submitted && f['phone'].errors}" />
+            <div *ngIf="submitted && f['phone'].errors" class="invalid-feedback">
+              <div  style="text-align: left; margin-left: 95px; margin-top: -15px;" *ngIf="f['phone'].errors['required']">Mobile Number is required</div>
+              <div style="text-align: left; margin-left: 95px; margin-top: -15px;" *ngIf="f['phone'].errors['pattern']">Please, Enter 10 digit Mobile Number></div>
+            </div>
         </div>
         <button type="submit">Update</button>
     </form>
