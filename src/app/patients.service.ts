@@ -22,7 +22,14 @@ export class PatientsService {
   }
 
   deletePatientByFirstName(pID: number): Observable<Patient>{
-    return this.http.delete<Patient>(`https://localhost:44337//api/patients/${pID}`);
+    return this.http.delete<Patient>(`https://localhost:44337//api/patients/${pID}`);}
+    
+  deletePatientBypID(pID: number): Observable<Patient>{
+    return this.http.delete<Patient>(`https://localhost:44337/api/appts/${pID}`);
+  }
+
+  deletePatientByID(ID: number): Observable<Patient>{
+    return this.http.delete<Patient>(`https://localhost:44337/api/patients/${ID}`);
   }
 
   editPatientByID(appts: appt[],pID: number, fname: string, lname: string, address: string, DOB: string, 
