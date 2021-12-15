@@ -14,6 +14,8 @@ import { AppointmentComponent } from './appointment/appointment.component';
 import { PatientDetailComponent } from './patient-detail/patient-detail.component';
 import { EditPatientComponent } from './edit-patient/edit-patient.component';
 import { FormsModule } from '@angular/forms';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {AgGridModule} from 'ag-grid-angular';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { FormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     MatCardModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatGridListModule,
+    AgGridModule.withComponents()
   ],
   providers: [],
   bootstrap: [AppComponent]

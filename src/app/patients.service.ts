@@ -14,11 +14,11 @@ export class PatientsService {
   ) { }
 
   getPatients(): Observable<Patient[]> {
-    return this.http.get<Patient[]>('https://localhost:44337/api/patients');
+    return this.http.get<Patient[]>('https://localhost:44367//api/patients');
   }
 
   getPatientByID(pID: number): Observable<Patient>{
-    return this.http.get<Patient>(`https://localhost:44337/api/patients/${pID}`);
+    return this.http.get<Patient>(`https://localhost:44367//api/patients/${pID}`);
   }
 
   deletePatientBypID(pID: number): Observable<Patient>{
@@ -32,7 +32,7 @@ export class PatientsService {
   editPatientByID(appts: appt[],pID: number, fname: string, lname: string, address: string, DOB: string, 
      phone: string): Observable<Patient>{
     
-    return this.http.put<Patient>(`https://localhost:44337/api/patients/${pID}`, {
+    return this.http.put<Patient>(`https://localhost:44367//api/patients/${pID}`, {
       "appts": appts,
       "pID": pID,
       "fname": fname,
