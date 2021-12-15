@@ -23,8 +23,14 @@ export class AppointmentComponent implements OnInit {
       .subscribe(patients => this.patients = patients)
   }
 
-  deletePatient(firstname: any) {
-    this.patientsService.deletePatientByFirstName(firstname)
+  deletePatient(pID: any) {
+    this.patientsService.deletePatientBypID(pID)
+    .subscribe(() => {
+      alert("Successfully Deleted!");
+      window.location.reload();
+    })
+
+    this.patientsService.deletePatientByID(pID)
     .subscribe(() => {
       alert("Successfully Deleted!");
       window.location.reload();
