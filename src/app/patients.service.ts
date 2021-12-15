@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Patient } from './patient';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { appt } from './appt';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PatientsService {
+  private exampleAppt : appt
 
   constructor(
     private http:HttpClient,
@@ -29,6 +30,11 @@ export class PatientsService {
     return this.http.delete<Patient>(`https://localhost:44349/api/patients/${pID}`);
   }
 
+  deleteAppointmentbyId(apptID: number): Observable<appt>{
+    return this.http.delete<appt>(`https://localhost:44349/api/appts/${apptID}`);
+  }
+     
+
   editPatientByID(appts: appt[],pID: number, fname: string, lname: string, address: string, DOB: string, 
      phone: string): Observable<Patient>{
     
@@ -43,5 +49,11 @@ export class PatientsService {
     })
   }
 
-   
+  creatApptByPid(pid:number, dateTime:string):Observable<appt>{
+    return this.http.post<appt>('https://localhost:44349/api/appts',{
+    pID:pid,
+    date_time:dateTime});
+  }
+  
+ 
 }

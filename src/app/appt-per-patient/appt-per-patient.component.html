@@ -1,1 +1,10 @@
-<p>appt-per-patient works!</p>
+<mat-card class="card-style" *ngFor="let appt of appts">
+    <div>
+        <h3>Appointment Reference ID: {{appt.appID}}</h3>
+        <h3>Date and Time: {{appt.date_time}}</h3>
+        <button (click)="deleteAppt(appt.appID)">Delete Appointment</button>
+    </div>
+</mat-card>
+
+<button class="schedule" routerLink="/schedule">SCHEDULE ANOTHER APPOINTMENT HERE</button>
+

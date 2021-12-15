@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { AuthenticationGuard } from './authentication.guard';
 import { PatientHomeComponent } from './patient-home/patient-home.component';
 import { ApptPerPatientComponent } from './appt-per-patient/appt-per-patient.component';
+import { ScheduleApptComponent } from './schedule-appt/schedule-appt.component';
 
 const routes: Routes = [
   {path: '', component: LoginComponent, pathMatch: 'full'},
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path: 'edit-patient/:pID', component: EditPatientComponent},
   {path: 'patientHome/:pID', component: PatientHomeComponent,canActivate:[AuthenticationGuard]},
   {path: 'apptPerPatient', component: ApptPerPatientComponent},
+  {path: 'schedule', component: ScheduleApptComponent},
 
 ];
 

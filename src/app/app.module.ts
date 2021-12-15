@@ -18,6 +18,7 @@ import { PatientHomeComponent } from './patient-home/patient-home.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ApptPerPatientComponent } from './appt-per-patient/appt-per-patient.component';
+import { ScheduleApptComponent } from './schedule-appt/schedule-appt.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { ApptPerPatientComponent } from './appt-per-patient/appt-per-patient.com
     EditPatientComponent,
     LoginComponent,
     PatientHomeComponent,
-    ApptPerPatientComponent
+    ApptPerPatientComponent,
+    ScheduleApptComponent
   ],
   imports: [
     BrowserModule,
